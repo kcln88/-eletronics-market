@@ -1,6 +1,9 @@
 class ProductsController < ApplicationController
   before_action :set_product
 
+  def show
+    @product = set_product
+  end
 
   private
   def set_product
