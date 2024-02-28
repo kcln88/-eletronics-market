@@ -15,6 +15,8 @@ class ProductsController < ApplicationController
       render :product, status: :unprocessable_entity
     end
 
+  def show
+    @product = set_product
   end
 
   private
