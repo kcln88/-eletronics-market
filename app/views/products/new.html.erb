@@ -1,0 +1,10 @@
+<h1>Informe o produto que você quer vender</h1>
+<%= simple_form_for @product do |f| %>
+  <%= f.input :name %>
+  <%= f.input :price %>
+  <%= f.input :description %>
+  <%= f.input :stock %>
+  <%= f.input :category %>
+  <%= f.input :photo_url %>
+  <%= f.button :submit %>
+<% end %>
