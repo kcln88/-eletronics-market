@@ -14,9 +14,9 @@ class ProductsController < ApplicationController
     else
       render :product, status: :unprocessable_entity
     end
+  end
 
   def show
-    @product = set_product
   end
 
   def edit

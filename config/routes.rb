@@ -11,6 +11,8 @@ Rails.application.routes.draw do
   post "products", to: "products#create"
   get "products/edit", to: "products#edit", as: :edit_product
   patch "products", to: "products#update"
+  get "products/:id", to: "products#show"
+
 
   get "order/new", to: "orders#create"
 
