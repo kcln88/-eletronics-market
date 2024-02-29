@@ -10,4 +10,9 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
-@import "devise/index"
+@import "devise/index";
+@import "pages/cards";
+
+a {
+  text-decoration: none;
+}
