@@ -1,0 +1,11 @@
+<h1>Pagina detalhando o produto: <%= @product.name %></h1>
+<p>Preço:<%= @product.price %></p>
+
+<div data-controller="show-form" data-show-form-price-value="<%= @product.price %>">
+  <%= simple_form_for [@product, @order] do |f| %>
+    <%= f.input :quantity, input_html: { data: {action: "keyup->show-form#calculateTotalPrice", show_form_target: "input" } } %>
+    <span>Preço total:</span>
+    <span data-show-form-target="total"></span>
+    <%= f.button :submit, "Comprar" %>
+  <% end %>
+</div>
