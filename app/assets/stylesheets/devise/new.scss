@@ -1,8 +1,4 @@
 
-body{
-  height: 100vh;
-}
-
 .log-in{
     margin: 0;
     padding: 0;
@@ -60,4 +56,9 @@ body{
   a:hover{
     color: #aaa05f;
   }
+}
+
+.espaçamento{
+  display: flex;
+  gap: 20px;
 }
