@@ -10,14 +10,6 @@ Rails.application.routes.draw do
   resources :products, only: %i[new create edit update show] do
     resources :orders, only: %i[create]
   end
-    # get "products/new", to: "products#new"
-  # post "products", to: "products#create"
-  # get "products/edit", to: "products#edit", as: :edit_product
-  # patch "products", to: "products#update"
-  # get "products/:id", to: "products#show"
-
-  # get "orders/new", to: "orders#new"
-  # post "orders", to: "orders#create", as: "order_create"
 
   # Defines the root path route ("/")
   # root "posts#index"

@@ -12,5 +12,4 @@ export default class extends Controller {
   calculateTotalPrice() {
     this.totalTarget.innerText = parseInt(this.inputTarget.value) * this.priceValue;
   }
-
 }
