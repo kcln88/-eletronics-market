@@ -9,6 +9,7 @@ Rails.application.routes.draw do
 
   get "products/new", to: "products#new"
   post "products", to: "products#create"
+  get "products/:id", to: "products#show"
 
   get "order/new", to: "orders#create"
 
