@@ -7,16 +7,16 @@ class OrdersController < ApplicationController
   end
 
   def create
-    @product = Product.find(params[:product_id])
-    @order = Order.new(orders_params)
-    @order.product = @product
-    @order.user = current_user
-
-    if @order.save
-      redirect_to home
-    else
-      render :order, status: :unprocessable_entity
-    end
+    # a logica do order create será diferente -> botao confirma compra
+    # @product = Product.find(params[:product_id])
+    # @order = Order.new(orders_params)
+    # @order.product = @product
+    # @order.user = current_user
+    # if @order.save
+    #   redirect_to home
+    # else
+    #   render :order, status: :unprocessable_entity
+    # end
   end
 
   private
