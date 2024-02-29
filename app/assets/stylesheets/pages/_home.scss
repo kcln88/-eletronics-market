@@ -1,1 +1,73 @@
 // Specific CSS for your home-page
+.container-home {
+ display: flex;
+ justify-content: center;
+}
+
+h1 {
+  display: flex;
+  justify-content: center;
+  font-size: 70px;
+  color: #11235A;
+}
+
+h2 {
+  display: flex;
+  justify-content: center;
+  font-size: 70px;
+  color: #11235A;
+}
+
+.card-category {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 50px;
+}
+
+.img-home {
+width: 1000px;
+height: 500px;
+margin: 40px;
+box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+display: flex;
+}
+
+.img-cell {
+width: 200px;
+height: 190px;
+border-radius: 50%;
+}
+
+.card-cell {
+text-align: center;
+}
+
+.img-acc {
+  width: 200px;
+  height: 190px;
+  border-radius: 50%;
+  }
+
+.card-acc {
+  text-align: center;
+}
+
+.img-not {
+  width: 200px;
+  height: 190px;
+  border-radius: 50%;
+  }
+
+.card-not {
+  text-align: center;
+}
+
+.img-cad {
+  width: 200px;
+  height: 190px;
+  border-radius: 50%;
+  }
+
+.card-cad {
+  text-align: center;
+}
