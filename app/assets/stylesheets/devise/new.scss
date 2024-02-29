@@ -1,8 +1,4 @@
 
-body{
-  height: 100vh;
-}
-
 .log-in{
     margin: 0;
     padding: 0;
@@ -10,7 +6,6 @@ body{
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-color: #11235A;
     background-size: cover;
     background-position: center;
 }
@@ -18,10 +13,10 @@ body{
 .wrapper{
   width: 420px;
   background: transparent;
-  border: 2px solid #F6ECA9;
+  border: 2px solid #11235A;;
     // backdrop-filter: blur(20px);
   box-shadow: 0 0 10px rgba(0,0,0,0.2);
-  color: #F6ECA9;
+  color: #11235A;;
   border-radius: 10px;
   padding: 30px 40px;
 
@@ -32,29 +27,38 @@ body{
 
   }
   .form-actions{
-  background-color: #F6ECA9;
+  background-color: #596FB7;
   margin: 0 20%;
   border-radius: 40px;
   text-align: center;
     input{
-      color: #11235A;
+      color: #F6ECA9;
       font-weight: 700;
     }
 
+    input:hover{
+      color: black;
+      font-weight: 700;
+    }
   }
 
   .form-actions:hover{
       color: #11235A;
       font-weight: 900;
-      background-color:  #aaa05f;
+      background-color:  #F6ECA9;
   }
 
   a{
     text-decoration: none;
-    color: #F6ECA9;
+    color: #11235A;
     margin-top: 8px;
   }
   a:hover{
     color: #aaa05f;
   }
+}
+
+.espaçamento{
+  display: flex;
+  gap: 20px;
 }

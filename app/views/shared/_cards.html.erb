@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="cards">
+    <% @products.each do |product| %>
+      <%= link_to product_path(product) do %>
+        <div class="card-product my-1">
+          <div class="card-product-image" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
+            <p>hello world</p>
+          </div>
+          <div class="card-product-info">
+            <div class="card-product-name mx-2"><%= product.name %></div>
+            <div class="card-product-price mx-4">$<%= product.price %></div>
+            <div class="card-product-address mx-2">address</div>
+            <div class="card-product-stock">Only <%= product.stock %> in stock!</div>
+          </div>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+</div>
