@@ -7,6 +7,11 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+
+user = User.new({ first_name: 'joao', last_name: 'silva', address: 'rua jerico 193', phone: '999999999', email: 'joao@email.com', password: '123123' })
+user.save!
+
 10.times do
-  Product.new({ name: 'ssss', price: 10.2, description: 'dsoandoas', stock: 20, category: 'lelele', user_id:1 })
+  product = Product.new({ name: 'ssss', price: 10.2, description: 'dsoandoas', stock: 20, category: 'lelele', user_id:1 })
+  product.save!
 end

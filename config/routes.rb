@@ -9,12 +9,7 @@ Rails.application.routes.draw do
 
   get "up" => "rails/health#show", as: :rails_health_check
 
-  # get "products/new", to: "products#new"
-  # post "products", to: "products#create"
-  # get "products/edit", to: "products#edit", as: :edit_product
-  # patch "products", to: "products#update"
-  # get "products/:id", to: "products#show"
-
+  resources :products
 
   get "order/new", to: "orders#create"
 
