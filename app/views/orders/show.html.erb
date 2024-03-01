@@ -1,0 +1,31 @@
+<div class="container">
+
+<div class="d-flex justify-content-center mt-5">
+        <div class="card-product my-1" style =" width:300px;">
+          <div class="card-product-image" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
+            <p>hello world</p>
+          </div>
+          <div class="card-product-info">
+            <div class="card-product-name mx-2"><%= @order.product.name %></div>
+            <div class="card-product-price mx-4">$<%= @order.product.price %></div>
+            <div class="card-product-stock">Only <%= @order.product.stock %> in stock!</div>
+          </div>
+        </div>
+
+</div>
+
+
+
+<div class="modal modal-sheet position-static d-block p-4 py-md-5 " tabindex="-1" role="dialog" id="modalChoice">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content rounded-3 shadow">
+      <div class="modal-body p-4 text-center">
+        <h5 class="mb-0">Voce confrima essa compra?</h5>
+      </div>
+      <div class="modal-footer flex-nowrap p-0">
+       <%= link_to "CONFIRMAR", root_path, class: "btn btn-success btn btn-lg btn-link fs-6 text-decoration-none col-6 py-3 m-0 rounded-0 border-end"%>
+       <%= link_to "CANCELAR", root_path, class: "btn btn-danger btn-lg btn-link fs-6 text-decoration-none col-6 py-3 m-0 rounded-0"%>
+      </div>
+    </div>
+  </div>
+</div>

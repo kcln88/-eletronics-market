@@ -1,6 +1,6 @@
 class ProductsController < ApplicationController
   before_action :set_product, except: [:new, :create]
-  before_action :authenticate_user!
+  before_action :authenticate_user!, except: [:show]
 
   def new
     @product = Product.new
@@ -10,14 +10,15 @@ class ProductsController < ApplicationController
     @product = Product.new(products_params)
     @product.user = current_user
     if @product.save
-      redirect_to root_path
+      redirect_to product_path(@product)
     else
-      render :product, status: :unprocessable_entity
+      render :new, status: :unprocessable_entity
     end
   end
 
   def show
     @order = Order.new
+    @products = Product.all
   end
 
   def edit

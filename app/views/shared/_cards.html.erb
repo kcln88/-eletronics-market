@@ -1,6 +1,7 @@
 <div class="container">
   <div class="cards">
-    <% @products.each do |product| %>
+    <% products.each_with_index do |product, index| %>
+      <% break if index >= 4 %>
       <%= link_to product_path(product) do %>
         <div class="card-product my-1">
           <div class="card-product-image" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
