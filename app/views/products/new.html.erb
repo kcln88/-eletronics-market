@@ -1,10 +1,17 @@
-<h1>Informe o produto que você quer vender</h1>
-<%= simple_form_for @product do |f| %>
-  <%= f.input :name %>
-  <%= f.input :price %>
-  <%= f.input :description %>
-  <%= f.input :stock %>
-  <%= f.input :category %>
-  <%= f.input :photo_url %>
-  <%= f.button :submit %>
-<% end %>
+<div class="container">
+  <div class="m-5 border p-2 mb-2 border-opacity-25 " style="border-radius: 60px;">
+    <div class="m-5">
+      <h1 class=" my-5">Informe o produto que você quer vender</h1>
+      <%= simple_form_for @product do |f| %>
+        <%= f.input :name %>
+        <%= f.input :price %>
+        <%= f.input :description %>
+        <%= f.input :stock %>
+        <%= f.input :category %>
+        <%= f.input :photo_url %>
+        <%= f.button :submit, class:"btn btn-success", style: "width: 100%; border-radius: 40px; color:white;"%>
+      <% end %>
+
+    </div>
+  </div>
+</div>
