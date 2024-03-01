@@ -5,23 +5,31 @@
     <div class = "card-category d-flex justify-content-evenly">
 
       <div class ="card-acc">
-      <%= link_to  image_tag("https://cdnm.westwing.com.br/glossary/uploads/br/2016/01/18152424/aparelhos-eletronicos-sobre-mesa-unsplash-c-a8321.jpg", class: "img-acc"), category_path(category: "Acessórios")%>
-      <strong class = "d-flex justify-content-center">Acessórios</strong>
+        <%= link_to category_path(category: "Acessórios") do %>
+          <%= image_tag("https://cdnm.westwing.com.br/glossary/uploads/br/2016/01/18152424/aparelhos-eletronicos-sobre-mesa-unsplash-c-a8321.jpg", class: "img-acc") %>
+          <strong class = "d-flex justify-content-center">Acessórios</strong>
+      <% end %>
       </div>
 
       <div class ="card-cell">
-      <%= link_to  image_tag("https://images.tcdn.com.br/img/img_prod/487288/smartphone_samsung_galaxy_a54_5g_128gb_8gb_ram_octa_core_camera_tripla_de_50mp_tela_infinita_de_6_4__9699_1_af334aeb37199f2b939ab781f8c3af94.jpg", class: "img-cell"), category_path(category: "Smartphones")%>
-      <strong class = "d-flex justify-content-center">Smartphones</strong>
+        <%= link_to category_path(category: "Smartphones") do %>
+          <%= image_tag("https://images.tcdn.com.br/img/img_prod/487288/smartphone_samsung_galaxy_a54_5g_128gb_8gb_ram_octa_core_camera_tripla_de_50mp_tela_infinita_de_6_4__9699_1_af334aeb37199f2b939ab781f8c3af94.jpg", class: "img-cell") %>
+          <strong class = "d-flex justify-content-center">Smartphones</strong>
+        <% end %>
       </div>
 
       <div class ="card-not">
-      <%= link_to  image_tag("https://m.media-amazon.com/images/I/61vFA1pGU2L.jpg", class: "img-not"), category_path(category: "Notebooks")%>
-      <strong class = "d-flex justify-content-center">Notebooks</strong>
+        <%= link_to category_path(category: "Notebooks") do %>
+          <%= image_tag("https://m.media-amazon.com/images/I/61vFA1pGU2L.jpg", class: "img-not") %>
+          <strong class = "d-flex justify-content-center">Notebooks</strong>
+        <% end %>
       </div>
 
       <div class ="card-cad">
-      <%= link_to  image_tag("https://images.tcdn.com.br/img/img_prod/503257/cadeira_gamer_eaglex_reclinavel_giratoria_vermelha_639_1_20191014100716.jpg", class: "img-cad"), category_path(category: "Cadeiras")%>
-      <strong class = "d-flex justify-content-center">Cadeiras Gamer</strong>
+        <%= link_to category_path(category: "Cadeiras") do %>
+          <%= image_tag("https://images.tcdn.com.br/img/img_prod/503257/cadeira_gamer_eaglex_reclinavel_giratoria_vermelha_639_1_20191014100716.jpg", class: "img-cad") %>
+          <strong class = "d-flex justify-content-center">Cadeiras Gamer</strong>
+          <% end %>
       </div>
 
     </div>
