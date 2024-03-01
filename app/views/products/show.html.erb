@@ -7,7 +7,8 @@
     <div class="item-info" >
       <h3><%= @product.name %></h3>
       <div class="item-info-dscp"><%= @product.description %></div>
-      <p>Preço:<%= @product.price %></p>
+      <p>Preço: <%= @product.price %></p>
+      <p>Estoque: <%= @product.stock %></p>
       <div data-controller="show-form" data-show-form-price-value="<%= @product.price %>">
         <%= simple_form_for [@product, @order] do |f| %>
           <%= f.input :quantity, input_html: { data: {action: "keyup->show-form#calculateTotalPrice", show_form_target: "input" } } %>
