@@ -10,7 +10,7 @@ class OrdersController < ApplicationController
     @order.product = @product
     @order.user = current_user
     if @order.save
-      redirect_to order_path
+      redirect_to order_path(@order)
     else
       render :product, status: :unprocessable_entity
     end
