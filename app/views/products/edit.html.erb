@@ -1,0 +1,10 @@
+<%= simple_form_for @product do |f| %>
+  <%= f.input :name %>
+  <%= f.input :price %>
+  <%= f.input :description %>
+  <%= f.input :stock %>
+  <%= f.input :category %>
+  <%= f.input :photo_url %>
+  <%= f.button :submit %>
+<% end %>
+<%= link_to 'Delete this product', product_path(@product), class: 'btn btn-cancel', data: { turbo_method: :delete, turbo_confirm: 'Are you sure you want to delete this product?' } %>

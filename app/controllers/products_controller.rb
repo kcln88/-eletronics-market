@@ -22,14 +22,26 @@ class ProductsController < ApplicationController
   end
 
   def edit
+    if @product.user != current_user
+      redirect_to root_path
+    end
   end
 
   def update
-    if @product.update(products_params)
-      redirect_to edit_product_path(@product)
+    if @product.user == current_user
+      if @product.update(products_params)
+        redirect_to product_path(@product)
+      else
+        render :edit, status: unprocessable_entity
+      end
     else
-      render :edit, status: unprocessable_entity
+      redirect_to root_path
     end
+  end
+
+  def destroy
+    @product.destroy
+    redirect_to root_path, status: :see_other
   end
 
   private
