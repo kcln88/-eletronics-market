@@ -8,7 +8,7 @@
         <%= f.input :description %>
         <%= f.input :stock %>
         <%= f.input :category %>
-        <%= f.input :photo_url %>
+        <%= f.input :photo, as: :file %>
         <%= f.button :submit, class:"btn btn-success", style: "width: 100%; border-radius: 40px; color:white;"%>
       <% end %>
 

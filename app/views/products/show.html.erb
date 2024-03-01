@@ -2,7 +2,7 @@
   <h2 class="product-page-title">Detalhes do produto</h2>
   <div class="item-card">
     <div class="item-img">
-      <%= image_tag "https://m.media-amazon.com/images/I/81fO2C9cYjL.__AC_SY445_SX342_QL70_ML2_.jpg" %>
+      <%= cl_image_tag @product.photo.key, height: 300, width: 400, crop: :fill %>
     </div>
     <div class="item-info" >
       <h3><%= @product.name %></h3>
