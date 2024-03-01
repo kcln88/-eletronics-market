@@ -1,12 +1,11 @@
-
 <div class="container">
-  <h1 class="product-page-title">Detalhes do produto</h1>
+  <h2 class="product-page-title">Detalhes do produto</h2>
   <div class="item-card">
     <div class="item-img">
       <%= image_tag "https://m.media-amazon.com/images/I/81fO2C9cYjL.__AC_SY445_SX342_QL70_ML2_.jpg" %>
     </div>
     <div class="item-info" >
-      <h2><%= @product.name %></h2>
+      <h3><%= @product.name %></h3>
       <div class="item-info-dscp"><%= @product.description %></div>
       <p>Preço:<%= @product.price %></p>
       <div data-controller="show-form" data-show-form-price-value="<%= @product.price %>">
@@ -20,6 +19,6 @@
       </div>
     </div>
   </div>
-  <h2 class="product-similar my-5">Produtos similares</h2>
+  <h3 class="product-similar my-5">Produtos similares</h3>
   <%= render 'shared/cards' %>
 </div>
