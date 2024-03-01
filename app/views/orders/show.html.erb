@@ -1,0 +1,29 @@
+<div class="container">
+
+<div class="d-flex justify-content-center mt-5">
+        <div class="card-product my-1" style =" width:300px;">
+          <div class="card-product-image" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
+            <p>hello world</p>
+          </div>
+          <div class="card-product-info">
+            <div class="card-product-name mx-2"><%= @order.product.name %></div>
+            <div class="card-product-price mx-4">$<%= @order.product.price %></div>
+            <div class="card-product-stock">Only <%= @order.product.stock %> in stock!</div>
+          </div>
+        </div>
+
+</div>
+
+
+  <div class="confirmation-container">
+    <div class="card-confirm"  id="verde">
+      <h2 class="text-center" >Confirmar Compra</h2>
+      <%= link_to "CONFIRMAR", root_path, class: "btn btn-success botao-borda"%>
+    </div>
+    <div class="card-confirm" id="vermelho">
+      <h2 class="text-center">Cancelar Compra</h2>
+      <%= link_to "CANCELAR", root_path, class: "btn btn-danger botao-borda"%>
+    </div>
+  </div>
+
+</div>
