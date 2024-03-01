@@ -1,13 +1,29 @@
 .item-card {
   display: flex;
+  height: 300px;
   width: 700px;
-  margin: auto;
+  margin: 0 auto;
+
+  img {
+    height: 100%;
+
+  }
 }
 
 .item-img {
-  width: 60%;
+  flex-grow: 1;
+
 }
 
 .item-info {
-  width: 150px;
+  flex-grow: 1;
+}
+
+.product-page-title {
+  margin: 36px auto;
+  text-align: center;
+}
+
+.product-similar {
+  text-align: center;
 }
