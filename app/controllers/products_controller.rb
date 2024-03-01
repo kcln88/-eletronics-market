@@ -10,9 +10,9 @@ class ProductsController < ApplicationController
     @product = Product.new(products_params)
     @product.user = current_user
     if @product.save
-      redirect_to root_path
+      redirect_to product_path(@product)
     else
-      render :product, status: :unprocessable_entity
+      render :new, status: :unprocessable_entity
     end
   end
 
