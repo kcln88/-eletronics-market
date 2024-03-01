@@ -11,6 +11,7 @@
 user = User.new({ first_name: 'joao', last_name: 'silva', address: 'rua jerico 193', phone: '999999999', email: 'joao@email.com', password: '123123' })
 user.save!
 
+
 10.times do
   product = Product.new({ name: 'Acessório', price: 15.00 , description: 'Acessório para celular', stock: 10, category: 'Acessórios', user_id:1 })
   product.save!
