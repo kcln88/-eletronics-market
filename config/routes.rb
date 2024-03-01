@@ -7,6 +7,5 @@ Rails.application.routes.draw do
   resources :products, only: %i[show new create edit update] do
     resources :orders, only: %i[create]
   end
-
-
+  resources :orders, only: :show
 end

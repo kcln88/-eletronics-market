@@ -18,6 +18,7 @@ class ProductsController < ApplicationController
 
   def show
     @order = Order.new
+    @products = Product.all
   end
 
   def edit
