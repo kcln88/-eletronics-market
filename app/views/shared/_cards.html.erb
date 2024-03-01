@@ -1,6 +1,6 @@
 <div class="container">
   <div class="cards">
-    <% @products.each_with_index do |product, index| %>
+    <% products.each_with_index do |product, index| %>
       <% break if index >= 4 %>
       <%= link_to product_path(product) do %>
         <div class="card-product my-1">
