@@ -9,15 +9,14 @@
 #   end
 require "open-uri"
 
-user = User.new({ first_name: 'joao', last_name: 'silva', address: 'rua jerico 193', phone: '999999999', email: 'joao@email.com', password: '123123' })
-user.save!
+# user = User.new({ first_name: 'joao', last_name: 'silva', address: 'rua jerico 193', phone: '999999999', email: 'joao@email.com', password: '123123' })
+# user.save!
 
-user2 = User.new({ first_name: 'maria', last_name: 'silva', address: 'rua jerico 193', phone: '999999999', email: 'maria@email.com', password: '123123' })
-user2.save!
+# user2 = User.new({ first_name: 'maria', last_name: 'silva', address: 'rua jerico 193', phone: '999999999', email: 'maria@email.com', password: '123123' })
+# user2.save!
 
-user3 = User.new({ first_name: 'pedro', last_name: 'silva', address: 'rua jerico 193', phone: '999999999', email: 'pedro@email.com', password: '123123' })
-user3.save!
-
+# user3 = User.new({ first_name: 'pedro', last_name: 'silva', address: 'rua jerico 193', phone: '999999999', email: 'pedro@email.com', password: '123123' })
+# user3.save!
 
   # ACESSORIOS
 

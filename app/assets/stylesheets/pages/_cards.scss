@@ -1,41 +1,40 @@
 .cards {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-gap: 100px;
+  grid-gap: 32px;
   width: 1100px;
   margin: auto;
 }
 
 .card-product {
-  background-size: cover;
-  background-position: center;
-  height: 250px;
   justify-content: center;
-  align-items: center;
+  align-content: center;
   color: black;
+  background-color: white;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  border-radius: 5px;
+  border-radius: 8px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
 
 .card-product-image {
-  height: 160px;
+  display: flex;
+  object-fit: cover;
+  height: 260px;
+  width: 240px;
 }
 
 .card-product-name {
-  font-size: 16px;
+  font-size: 20px;
+  font-weight: 600;
 }
 
 .card-product-price {
-  font-size: 18px;
+  font-size: 20px;
   font-weight: medium-bold;
-}
-
-.card-product-address {
-  font-size: 10px;
+  text-align: right;
 }
 
 .card-product-stock {
-  text-align: center;
-  font-size: 8px;
+  text-align: right;
+  font-size: 12px;
 }
