@@ -1,0 +1,31 @@
+.category-banner {
+  width: 100%;
+  height: 400px;
+  background: url('https://images.unsplash.com/photo-1630080644615-0b157f1574ec?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') center/cover;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.category-banner h2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #F6ECA9;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+@media (max-width: 768px) {
+  .category-banner {
+      height: 200px; /* Adjust the height for smaller screens */
+  }
+
+  .category-banner h2 {
+      // font-size: 1.8em; /* Adjust the font size for smaller screens */
+  }
+}

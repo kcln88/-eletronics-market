@@ -12,9 +12,9 @@
       <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
         <div class="container">
           <div class="carousel-caption text-start">
-            <h1>Example headline.</h1>
-            <p class="opacity-75">Some representative placeholder content for the first slide of the carousel.</p>
-            <p><a class="btn btn-lg btn-primary" href="#">Sign up today</a></p>
+            <h1 class="text-shadow-fundo">Promoções gamers</h1>
+            <p class="text-shadow-fundo">Estamos com muitas promoções no mês do consumidor.</p>
+            <%# <p><a class="btn btn-lg btn-primary" href="#">Sign up today</a></p> %>
           </div>
         </div>
       </div>
@@ -22,19 +22,19 @@
         <img src="https://images.unsplash.com/photo-1584438784894-089d6a62b8fa?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
         <div class="container">
           <div class="carousel-caption">
-            <h1>Another example headline.</h1>
-            <p>Some representative placeholder content for the second slide of the carousel.</p>
-            <p><a class="btn btn-lg btn-primary" href="#">Learn more</a></p>
+            <h1 class="text-shadow-fundo">Aparelhos celulares</h1>
+            <p class="text-shadow-fundo">Aparelhos de varias marcas e modelos.</p>
+            <%# <p><a class="btn btn-lg btn-primary" href="#">Learn more</a></p> %>
           </div>
         </div>
       </div>
       <div class="carousel-item item-carousel active">
-      <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
+      <img src="https://images.unsplash.com/photo-1603481546579-65d935ba9cdd?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
       <div class="container">
           <div class="carousel-caption text-end">
-            <h1>One more for good measure.</h1>
-            <p>Some representative placeholder content for the third slide of this carousel.</p>
-            <p><a class="btn btn-lg btn-primary" href="#">Browse gallery</a></p>
+            <h1 class="text-shadow-fundo">Acessórios diversos</h1>
+            <p class="text-shadow-fundo">Tudo que você procura para melhorar sua experiência</p>
+            <%# <p><a class="btn btn-lg btn-primary" href="#">Browse gallery</a></p> %>
           </div>
         </div>
       </div>
@@ -49,42 +49,68 @@
     </button>
   </div>
 
+<div class="categorias-botoes margin-top-100">
 
   <h1 class="h2"><strong>Categorias</strong></h1>
+
     <div class = "card-category d-flex justify-content-evenly flex-wrap margin-top-100">
 
-      <div class ="card-acc">
+      <div class ="card-acc ">
         <%= link_to category_path(category: "Acessórios") do %>
-          <%= image_tag("https://cdnm.westwing.com.br/glossary/uploads/br/2016/01/18152424/aparelhos-eletronicos-sobre-mesa-unsplash-c-a8321.jpg", class: "img-acc") %>
+          <%= image_tag("https://cdnm.westwing.com.br/glossary/uploads/br/2016/01/18152424/aparelhos-eletronicos-sobre-mesa-unsplash-c-a8321.jpg", class: "img-acc category-avatar") %>
           <strong class = "d-flex justify-content-center">Acessórios</strong>
       <% end %>
       </div>
 
-      <div class ="card-cell">
+      <div class ="card-cell ">
         <%= link_to category_path(category: "Smartphones") do %>
-          <%= image_tag("https://images.tcdn.com.br/img/img_prod/487288/smartphone_samsung_galaxy_a54_5g_128gb_8gb_ram_octa_core_camera_tripla_de_50mp_tela_infinita_de_6_4__9699_1_af334aeb37199f2b939ab781f8c3af94.jpg", class: "img-cell") %>
+          <%= image_tag("https://images.tcdn.com.br/img/img_prod/487288/smartphone_samsung_galaxy_a54_5g_128gb_8gb_ram_octa_core_camera_tripla_de_50mp_tela_infinita_de_6_4__9699_1_af334aeb37199f2b939ab781f8c3af94.jpg", class: "img-cell category-avatar") %>
           <strong class = "d-flex justify-content-center">Smartphones</strong>
         <% end %>
       </div>
 
-      <div class ="card-not">
+      <div class ="card-not ">
         <%= link_to category_path(category: "Notebooks") do %>
-          <%= image_tag("https://m.media-amazon.com/images/I/61vFA1pGU2L.jpg", class: "img-not") %>
+          <%= image_tag("https://m.media-amazon.com/images/I/61vFA1pGU2L.jpg", class: "img-not category-avatar") %>
           <strong class = "d-flex justify-content-center">Notebooks</strong>
         <% end %>
       </div>
 
-      <div class ="card-cad">
+      <div class ="card-cad ">
         <%= link_to category_path(category: "Cadeiras") do %>
-          <%= image_tag("https://images.tcdn.com.br/img/img_prod/503257/cadeira_gamer_eaglex_reclinavel_giratoria_vermelha_639_1_20191014100716.jpg", class: "img-cad") %>
+          <%= image_tag("https://images.tcdn.com.br/img/img_prod/503257/cadeira_gamer_eaglex_reclinavel_giratoria_vermelha_639_1_20191014100716.jpg", class: "img-cad category-avatar") %>
           <strong class = "d-flex justify-content-center">Cadeiras Gamer</strong>
           <% end %>
       </div>
 
     </div>
+</div>
+</div>
 
+<h2 class="h2 margin-top-100"><strong>Produtos</strong></h2>
+<div class="margin-top-100">
+  <%= render 'shared/cards', products: @products %>
+  <%= render 'shared/cards', products: @products %>
 </div>
 
 
-    <h2 class="h2 margin-top-100"><strong>Produtos</strong></h2>
-  <%= render 'shared/cards', products: @products %>
+  <div class="container py-4 margin-top-100" >
+
+  <div class="row align-items-md-stretch">
+    <div class="col-md-6">
+      <div class="h-100 p-5 background-color-azul-padrao border-radius-60 box-shadow-sem-hover">
+        <h2>Promoções imperdiveis</h2>
+        <p>No mes do consumidor estamos com promoções imperdiveis, acesso nossas categorias para saber mais sobre os produtos em promoção</p>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="h-100 p-5 bg-body-tertiary border border-radius-60 box-shadow-sem-hover" style="color: #11235A;">
+        <h2>Venha vender com a Eletronics Market!</h2>
+        <p>Ajudamos milhares de pessoas todos os anos a vender e comprar produtos eletronicos, sem burocracia, perda de tempo e taxa abusivas</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<%= render 'shared/cards', products: @products %>

@@ -80,6 +80,32 @@ text-align: center;
   max-height: 60vh;
 }
 
+.category-avatar:hover{
+  box-shadow: 0 4px 8px rgba(0,0,0,0.16),
+  0 4px 8px rgba(0,0,0,0.23);
+  transform: translate(0px, -8px);
+}
+
+.text-shadow-fundo{
+  font-weight: bold;
+  text-shadow: 1px 1px 2px #11235A;
+}
+
+.background-color-azul-padrao{
+  background-color: #11235A;
+  color: #F6ECA9;
+
+}
+
+.border-radius-60{
+  border-radius: 60px;
+}
+
+.box-shadow-sem-hover{
+  box-shadow: 0 4px 8px rgba(0,0,0,0.16),
+  0 4px 8px rgba(0,0,0,0.23);
+}
+
 @media(max-width: 1000px) {
   .container-home{
     width: 100%;

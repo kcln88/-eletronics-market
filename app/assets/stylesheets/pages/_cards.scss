@@ -40,13 +40,14 @@
 //   font-size: 8px;
 // }
 
-.gallery-card{
+.gallery-card-jairo{
   display: flex;
   flex-wrap: wrap;
   width: 100%;
   justify-content: center;
   align-items: center;
   margin: 50px 0;
+  gap: 40px
 }
 
 .content-card{
@@ -126,9 +127,5 @@
   .content-card{
     width: 100%;
   }
-
-}
-
-.card-product-image{
 
 }
