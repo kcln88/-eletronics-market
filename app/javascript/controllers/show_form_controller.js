@@ -6,10 +6,20 @@ export default class extends Controller {
   static values = {price: Number}
 
   connect() {
-    // console.log(this.priceValue);
   }
 
   calculateTotalPrice() {
-    this.totalTarget.innerText = parseInt(this.inputTarget.value) * this.priceValue;
+    // console.log(this.priceValue);
+    // console.log(this.inputTarget.value);
+    // this.totalTarget.innerText = parseInt(this.inputTarget.value) * this.priceValue / 100;
+    const number = parseInt(this.inputTarget.value) * this.priceValue / 100;
+    const formatted = number.toLocaleString('pt-BR', {
+      style: 'currency',
+      currency: 'BRL'
+    });
+
+
+    this.totalTarget.innerText = formatted;
+    // var valorTotal =  parseInt(this.inputTarget.value) * this.priceValue / 100;
   }
 }
