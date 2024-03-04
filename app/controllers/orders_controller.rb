@@ -38,7 +38,7 @@ class OrdersController < ApplicationController
   end
 
   def index
-    
+    @orders = current_user.orders.where(params[:id])
   end
 
   private
