@@ -18,7 +18,7 @@ class ProductsController < ApplicationController
 
   def show
     @order = Order.new
-    @products = Product.all
+    @products = Product.where(category: @product.category).and(Product.where.not(id: @product.id))
   end
 
   def edit
