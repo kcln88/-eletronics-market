@@ -5,7 +5,7 @@
     <%= link_to product_path(product) do %>
       <div class="content-card">
         <%= cl_image_tag product.photo.key, class:"card-product-image border-radius-60"%>
-        <h3><%= truncate(product.name, length: 14) %></h3>
+        <h3><%= truncate(product.name, length: 12) %></h3>
         <h6>R$ <%= product.price %></h6>
         <p>Apenas <%= product.stock %> em estoque!</p>
         <button>Compre Agora</button>
