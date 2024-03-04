@@ -8,5 +8,7 @@ Rails.application.routes.draw do
   resources :products, only: %i[show new create edit update destroy] do
     resources :orders, only: %i[create]
   end
-  resources :orders, only: :show
+  resources :orders, only: :show do
+    resources :payments, only: :new
+  end
 end

@@ -1,4 +1,6 @@
 require 'date'
+require 'stripe'
+Stripe.api_version = "2018-02-28"
 
 class OrdersController < ApplicationController
   before_action :authenticate_user!
@@ -9,15 +11,30 @@ class OrdersController < ApplicationController
     @order.date = Date.today
     @order.product = @product
     @order.user = current_user
+    @order.state = "pending"
     if @order.save
-      redirect_to order_path(@order)
+      session = Stripe::Checkout::Session.create(
+        payment_method_types: ['card'],
+        line_items: [{
+          name: @product.name,
+          # images: [@product.photo_url],
+          amount: @product.price_cents,
+          currency: 'brl',
+          quantity: @order.quantity
+        }],
+        success_url: order_url(@order),
+        cancel_url: order_url(@order)
+      )
+
+      @order.update(checkout_session_id: session.id)
+      redirect_to new_order_payment_path(@order)
     else
       render :product, status: :unprocessable_entity
     end
   end
 
   def show
-    @order = Order.find(params[:id])
+    @order = current_user.orders.find(params[:id])
   end
 
   private
