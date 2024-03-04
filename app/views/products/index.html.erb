@@ -1,3 +1,17 @@
-<% @products.reverse_each do |product| %>
-  <%= product.name %>
-<% end %>
+<div class="container">
+<div class="gallery-card-jairo">
+  <% @products.each_with_index do |product, index| %>
+   <% break if index >= 8 %>
+    <%= link_to edit_product_path(product) do %>
+      <div class="content-card">
+        <%= cl_image_tag product.photo.key, class:"card-product-image border-radius-60"%>
+        <h3><%= truncate(product.name, length: 12) %></h3>
+        <h6>R$ <%= product.price %></h6>
+        <p>Apenas <%= product.stock %> em estoque!</p>
+        <button>Edite sua venda</button>
+      </div>
+    <% end %>
+  <% end %>
+</div>
+
+</div>
