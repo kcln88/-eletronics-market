@@ -37,6 +37,10 @@ class OrdersController < ApplicationController
     @order = current_user.orders.find(params[:id])
   end
 
+  def index
+    
+  end
+
   private
 
   def orders_params
