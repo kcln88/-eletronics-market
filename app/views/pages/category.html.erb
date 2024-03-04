@@ -1,6 +1,22 @@
-<div class = "container-home">
-  <img class= "img-home" src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="img home">
-</div>
-
+<% case @category %>
+<% when "Acessórios"%>
+  <div class="category-banner" style='background: url("https://images.unsplash.com/photo-1630080644615-0b157f1574ec?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D") center/cover;'>
     <h2 class="h2"><strong><%= @category %></strong></h2>
-  <%= render 'shared/cards', products: @products %>
+  </div>
+<% when "Smartphones"%>
+  <div class="category-banner" style='background: url("https://images.unsplash.com/photo-1483478550801-ceba5fe50e8e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D") center/cover;'>
+    <h2 class="h2"><strong><%= @category %></strong></h2>
+  </div>
+<% when "Notebooks"%>
+  <div class="category-banner" style='background: url("https://images.unsplash.com/photo-1505327191481-d31e1fb4ff79?q=80&w=1949&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D") center/cover;'>
+    <h2 class="h2"><strong><%= @category %></strong></h2>
+  </div>
+<% when "Cadeiras"%>
+   <div class="category-banner" style='background: url("https://img.freepik.com/premium-photo/image-comfortable-beautiful-gaming-chair_800563-4856.jpg") center/cover;'>
+    <h2 class="h2"><strong><%= @category %></strong></h2>
+  </div>
+<% end %>
+
+
+<%= render 'shared/cards', products: @products %>
+
