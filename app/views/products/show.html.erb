@@ -11,7 +11,7 @@
       <p>Estoque: <%= @product.stock %></p>
       <div data-controller="show-form" data-show-form-price-value="<%= @product.price_cents %>">
         <%= simple_form_for [@product, @order] do |f| %>
-          <%= f.input :quantity, input_html: { data: {action: "change->show-form#calculateTotalPrice", show_form_target: "input" } } %>
+          <%= f.input :quantity, input_html: { data: {action: "change->show-form#calculateTotalPrice", show_form_target: "input" }, min: '0' } %>
           <%= f.button :submit, "Comprar", class: 'btn btn-primary' %>
           <br>
           <span>Preço total:</span>
