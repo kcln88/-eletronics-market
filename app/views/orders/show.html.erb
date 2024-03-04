@@ -2,7 +2,7 @@
   <div class="row py-4">
     <div class="col">
       <h1>Pedido número: <%= @order.id %></h1>
-      <h3>Status do pedido: <%= @order.state %></h2>
+      <h3>Status do pedido: <%= @order.state == "pending" ? "Em andamento" : @order.state %></h2>
       <ul class="list-unstyled">
         <li><strong>Data do pedido: </strong> <%= @order.created_at.to_date %></li>
         <li><strong>Produto: </strong> <%= @order.product.name %></li>
