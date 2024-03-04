@@ -9,8 +9,8 @@
 #   end
 require "open-uri"
 p "starting the Seed!"
-# user = User.new({ first_name: 'joao', last_name: 'silva', address: 'rua jerico 193', phone: '999999999', email: 'joao@email.com', password: '123123' })
-# user.save!
+user = User.new({ first_name: 'joao', last_name: 'silva', address: 'rua jerico 193', phone: '999999999', email: 'joao@email.com', password: '123123' })
+user.save!
 
 # user2 = User.new({ first_name: 'maria', last_name: 'silva', address: 'rua jerico 193', phone: '999999999', email: 'maria@email.com', password: '123123' })
 # user2.save!
@@ -26,15 +26,15 @@ file16 = URI.open("https://www.fastshop.com.br//wcsstore/FastShopCAS/images/cata
 
   # ACESSORIOS
 
-  # file = URI.open("https://images.kabum.com.br/produtos/fotos/153395/fone-de-ouvido-sem-fio-philips-true-wireless-bluetooth-preto-tat1235bk-97_1617798935_gg.jpg")
-  # product = Product.new(name: 'Fone Wireless', price: 300, description: 'Microfone embutido com cancelamento de eco para um áudio nítido. Chega de ouvir aquele eco chato enquanto você fala ao telefone. Com o cancelamento de eco acústico, as conversas ficam nítidas e sem interferências', stock: 20, category:'Acessórios', user_id:1)
-  # product.photo.attach(io: file, filename: "product.png", content_type: "image/png")
-  # product.save!
+  file = URI.open("https://images.kabum.com.br/produtos/fotos/153395/fone-de-ouvido-sem-fio-philips-true-wireless-bluetooth-preto-tat1235bk-97_1617798935_gg.jpg")
+  product = Product.new(name: 'Fone Wireless', price: 300, description: 'Microfone embutido com cancelamento de eco para um áudio nítido. Chega de ouvir aquele eco chato enquanto você fala ao telefone. Com o cancelamento de eco acústico, as conversas ficam nítidas e sem interferências', stock: 20, category:'Acessórios', user_id:1)
+  product.photo.attach(io: file, filename: "product.png", content_type: "image/png")
+  product.save!
 
-  # file2 = URI.open("https://images.kabum.com.br/produtos/fotos/421825/caixa-de-som-portatil-jbl-go3-bluetooth-4-2-w-rms-a-prova-d-agua-ate-5-hrs-de-bateria-verde-jblgo3ecogrn_1687349792_m.jpg")
-  # product2 = Product.new(name: 'Caixa Wireless', price: 500, description: 'Com um novo design inovador e ecologicamente correto, a Caixa de Som Portátil JBL GO3 tem o mesmo desempenho notável do áudio que você já conhece. Com um acessório que não pode faltar em seu próximo passeio', stock: 10, category: 'Acessórios', user_id:2)
-  # product2.photo.attach(io: file2, filename: "product2.png", content_type: "image/png")
-  # product2.save!
+  file2 = URI.open("https://images.kabum.com.br/produtos/fotos/421825/caixa-de-som-portatil-jbl-go3-bluetooth-4-2-w-rms-a-prova-d-agua-ate-5-hrs-de-bateria-verde-jblgo3ecogrn_1687349792_m.jpg")
+  product2 = Product.new(name: 'Caixa Wireless', price: 500, description: 'Com um novo design inovador e ecologicamente correto, a Caixa de Som Portátil JBL GO3 tem o mesmo desempenho notável do áudio que você já conhece. Com um acessório que não pode faltar em seu próximo passeio', stock: 10, category: 'Acessórios', user_id:1)
+  product2.photo.attach(io: file2, filename: "product2.png", content_type: "image/png")
+  product2.save!
 
   # file3 = URI.open("https://m.media-amazon.com/images/I/51vqYPmotDL._AC_UL480_FMwebp_QL65_.jpg")
   # product3 = Product.new(name: 'Phone charger', price: 39.89, description: 'The 20W USB-C port PD fast adapter USB C wall charger and 6ft usb c to ligh.tning cable, which can reach up to 3X faster than the original 5W charger.', stock: 9, category: 'Acessórios', user_id:2)
