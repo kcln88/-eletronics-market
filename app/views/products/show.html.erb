@@ -2,7 +2,9 @@
   <h2 class="product-page-title">Detalhes do produto</h2>
   <div class="item-card">
     <div class="item-img">
-      <%= cl_image_tag @product.photo.key, height: 300, width: 400, crop: :fit %>
+    <% @product.photos.each do |photo| %>
+      <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fit %>
+      <% end %>
     </div>
     <div class="item-info" >
       <h3><%= @product.name %></h3>
@@ -23,3 +25,33 @@
   <h2 class="product-similar my-5">Produtos similares</h2>
   <%= render 'shared/cards', products: @products %>
 </div>
+
+
+
+<div id="myCarousel" class="carousel slide mb-6 pointer-event margin-top-100" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="" aria-label="Slide 1"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item item-carousel active">
+      <% @product.photos.each do |photo| %>
+      <%= cl_image_tag photo.key, class:"card-product-image border-radius-60"%>
+      <% end %>
+      <div class="container">
+          <div class="carousel-caption text-end">
+            <h1 class="text-shadow-fundo">Acessórios diversos</h1>
+            <p class="text-shadow-fundo">Tudo que você procura para melhorar sua experiência</p>
+            <%# <p><a class="btn btn-lg btn-primary" href="#">Browse gallery</a></p> %>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
