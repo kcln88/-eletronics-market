@@ -8,4 +8,11 @@ class Product < ApplicationRecord
   validates :description, presence: true
   validates :stock, presence: true, numericality: { greater_than: 0 }
   validates :category, presence: true
+
+  include PgSearch::Model
+  pg_search_scope :search_product,
+    against: [ :name],
+    using: {
+      tsearch: { prefix: true }
+    }
 end
