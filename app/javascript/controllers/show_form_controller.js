@@ -18,8 +18,6 @@ export default class extends Controller {
       currency: 'BRL'
     });
 
-
     this.totalTarget.innerText = formatted;
-    // var valorTotal =  parseInt(this.inputTarget.value) * this.priceValue / 100;
   }
 }

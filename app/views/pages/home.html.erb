@@ -1,6 +1,6 @@
 
 <div class="container">
-
+<!-- Section: Carroussel  -->
 <div id="myCarousel" class="carousel slide mb-6 pointer-event margin-top-100" data-bs-ride="carousel">
     <div class="carousel-indicators">
       <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="" aria-label="Slide 1"></button>
@@ -48,9 +48,10 @@
       <span class="visually-hidden">Next</span>
     </button>
   </div>
+<!-- Section: Carroussel  -->
 
+<!-- Section: Categorias  -->
 <div class="categorias-botoes margin-top-100">
-
   <h1 class="h2"><strong>Categorias</strong></h1>
 
     <div class = "card-category d-flex justify-content-evenly flex-wrap margin-top-100">
@@ -86,30 +87,50 @@
     </div>
 </div>
 </div>
+<!-- Section: Categorias  -->
 
 <h2 class="h2 margin-top-100"><strong>Produtos</strong></h2>
+
+<!-- Section: Botao Quantidade de Produtos -->
+<div class="btn-group" data-controller="list-products">
+  <button class="btn btn-secondary btn-sm" type="button">
+    Mostrar 8 de X produtos
+  </button>
+  <button type="button" class="btn btn-sm btn-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+    <span class="visually-hidden">Toggle Dropdown</span>
+  </button>
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item" href="#" data-action- >Mostrar 8 de X produtos</a></li>
+    <li><a class="dropdown-item" href="#">Mostrar 16 de X produtos</a></li>
+    <li><a class="dropdown-item" href="#">Mostrar 32 de X produtos</a></li>
+  </ul>
+</div>
+<!-- Section: Botao Quantidade de Produtos -->
+
+<!-- Section: Cards -->
 <div class="margin-top-100">
   <%= render 'shared/cards', products: @products %>
 </div>
+<!-- Section: Cards -->
 
 
   <div class="container py-4 margin-top-100" >
-
-  <div class="row align-items-md-stretch">
-    <div class="col-md-6">
-      <div class="h-100 p-5 background-color-azul-padrao border-radius-60 box-shadow-sem-hover">
-        <h2>Promoções imperdiveis</h2>
-        <p>No mes do consumidor estamos com promoções imperdiveis, acesso nossas categorias para saber mais sobre os produtos em promoção</p>
+    <div class="row align-items-md-stretch">
+      <div class="col-md-6">
+        <div class="h-100 p-5 background-color-azul-padrao border-radius-60 box-shadow-sem-hover">
+          <h2>Promoções imperdiveis</h2>
+          <p>No mes do consumidor estamos com promoções imperdiveis, acesso nossas categorias para saber mais sobre os produtos em promoção</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="h-100 p-5 bg-body-tertiary border border-radius-60 box-shadow-sem-hover" style="color: #11235A;">
+          <h2>Venha vender com a Eletronics Market!</h2>
+          <p>Ajudamos milhares de pessoas todos os anos a vender e comprar produtos eletronicos, sem burocracia, perda de tempo e taxa abusivas</p>
+        </div>
       </div>
     </div>
-    <div class="col-md-6">
-      <div class="h-100 p-5 bg-body-tertiary border border-radius-60 box-shadow-sem-hover" style="color: #11235A;">
-        <h2>Venha vender com a Eletronics Market!</h2>
-        <p>Ajudamos milhares de pessoas todos os anos a vender e comprar produtos eletronicos, sem burocracia, perda de tempo e taxa abusivas</p>
-      </div>
-    </div>
-  </div>
 </div>
 
-
+<!-- Section: Cards -->
 <%= render 'shared/cards', products: @products %>
+<!-- Section: Cards -->
