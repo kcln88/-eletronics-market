@@ -1,5 +1,5 @@
 class ProductsController < ApplicationController
-  before_action :set_product, except: [:new, :create]
+  before_action :set_product, except: [:new, :create, :index]
   before_action :authenticate_user!, except: [:show]
 
   def new
@@ -42,6 +42,10 @@ class ProductsController < ApplicationController
   def destroy
     @product.destroy
     redirect_to root_path, status: :see_other
+  end
+
+  def index
+    @products = current_user.products.where(params[:id])
   end
 
   private

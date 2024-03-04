@@ -3,6 +3,15 @@
     <%= link_to root_path, class: "navbar-brand" do %>
       <%= image_tag "logo.png" %>
     <% end %>
+      <div class="col-6">
+          <%= form_with url: root_path, method: :get, class: "d-flex" do %>
+            <%= text_field_tag :query,
+                params[:query], value: "",
+                class:"form-control",
+                placeholder:"Busque aqui" %>
+            <%= submit_tag "Pesquise", name: "", class: "btn" %>
+          <% end %>
+      </div>
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -18,8 +27,8 @@
             <p class = "menu d-flex justify-content-center"><strong>Olá, <%=current_user.first_name %></strong></p>
             <%= link_to "MINHA CONTA", "/minha-conta", data: { bs_toggle: "dropdown" }, aria: { haspopup: "true", expanded: "true" }, class: "minha-conta d-flex justify-content-center", style: "color:white;" %>
           <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-            <i class="fa-solid fa-bag-shopping"></i> <%= link_to"Meus Pedidos", "#", class: "dropdown-item" %>
-            <%= link_to "Meus Anúncios", "#", class: "dropdown-item" %>
+            <i class="fa-solid fa-bag-shopping"></i> <%= link_to "Meus Pedidos", user_orders_path(current_user), class: "dropdown-item" %>
+            <%= link_to "Meus Anúncios", user_products_path(current_user), class: "dropdown-item" %>
             <%= link_to "Finalizar Sessão", destroy_user_session_path, data: {turbo_method: :delete}, class: "dropdown-item" %>
           </div>
           </li>
