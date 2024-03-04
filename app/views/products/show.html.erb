@@ -7,7 +7,7 @@
     <div class="item-info" >
       <h3><%= @product.name %></h3>
       <div class="item-info-dscp"><%= @product.description %></div>
-      <p>Preço: <%= @product.price %></p>
+      <p>Preço: <%= humanized_money_with_symbol(@product.price) %>
       <p>Estoque: <%= @product.stock %></p>
       <div data-controller="show-form" data-show-form-price-value="<%= @product.price_cents %>">
         <%= simple_form_for [@product, @order] do |f| %>
@@ -15,7 +15,7 @@
           <%= f.button :submit, "Comprar", class: 'btn btn-primary' %>
           <br>
           <span>Preço total:</span>
-          <span data-show-form-target="total"></span>
+          <p><span data-show-form-target="total"></span></p>
         <% end %>
       </div>
     </div>
