@@ -3,6 +3,9 @@ class PagesController < ApplicationController
 
   def home
     @products = Product.all
+    if params[:query]
+      @products = Product.search_product(params[:query])
+    end
   end
 
   def category
