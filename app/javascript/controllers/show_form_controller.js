@@ -6,10 +6,11 @@ export default class extends Controller {
   static values = {price: Number}
 
   connect() {
-    // console.log(this.priceValue);
   }
 
   calculateTotalPrice() {
-    this.totalTarget.innerText = parseInt(this.inputTarget.value) * this.priceValue;
+    console.log(this.priceValue);
+    console.log(this.inputTarget.value);
+    this.totalTarget.innerText = parseInt(this.inputTarget.value) * this.priceValue / 100;
   }
 }
