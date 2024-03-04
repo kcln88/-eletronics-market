@@ -2,7 +2,7 @@
   <h2 class="product-page-title">Detalhes do produto</h2>
   <div class="item-card">
     <div class="item-img">
-      <%= cl_image_tag @product.photo.key, height: 300, width: 400, crop: :fill %>
+      <%= cl_image_tag @product.photo.key, height: 300, width: 400, crop: :fit %>
     </div>
     <div class="item-info" >
       <h3><%= @product.name %></h3>

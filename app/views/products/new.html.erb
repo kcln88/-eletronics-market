@@ -4,7 +4,7 @@
       <h1 class=" my-5">Informe o produto que você quer vender</h1>
       <%= simple_form_for @product do |f| %>
         <%= f.input :name %>
-        <%= f.input :price %>
+        <%= f.input :price_cents %>
         <%= f.input :description %>
         <%= f.input :stock %>
         <%= f.input :category, collection: ["Acessórios", "Smartphones", "Notebooks", "Cadeiras"] %>
