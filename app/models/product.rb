@@ -10,6 +10,7 @@ class Product < ApplicationRecord
   validates :stock, presence: true, numericality: { greater_than: 0 }
   validates :category, presence: true
   validates :photo, presence: true
+  validates :price_cents, presence: true, numericality: { greater_than: 0 }
 
   include PgSearch::Model
   pg_search_scope :search_product,
