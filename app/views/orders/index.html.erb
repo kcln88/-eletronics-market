@@ -1,0 +1,8 @@
+<ul>
+  <% @orders.reverse_each do |order| %>
+    <li>
+      <%= order.id %>
+      <%= order.product.name %>
+    </li>
+  <% end %>
+</ul>

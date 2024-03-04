@@ -8,7 +8,12 @@ Rails.application.routes.draw do
   resources :products, only: %i[show new create edit update destroy] do
     resources :orders, only: %i[create]
   end
-  resources :orders, only: :show do
+
+  resources :orders, only: %i[show index] do
     resources :payments, only: :new
+  end
+
+  resources :users do
+    resources :orders, only: %i[index]
   end
 end
