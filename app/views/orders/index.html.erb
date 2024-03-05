@@ -1,12 +1,12 @@
-<div class="container my-5 ">
-  <ul class="list-group list-group-horizontal">
-    <li class="list-group-item text-color-azul" style="width: 10%;"><strong>Número do pedido:</strong></li>
+<h2 class="h2">Histórico de Pedidos</h2>
+<div class="container my-5">
+  <ul class="list-group list-group-horizontal ">
+    <li class="list-group-item text-color-azul" style="width: 10%; border-radius: 20px 0 0 0"><strong>Número do pedido:</strong></li>
     <li class="list-group-item text-color-azul" style="width: 20%;"><strong>Data do pedido:</strong></li>
     <li class="list-group-item text-color-azul" style="width: 30%;"><strong>Produto:</strong></li>
     <li class="list-group-item text-color-azul" style="width: 20%;"><strong>Valor total:</strong></li>
-    <li class="list-group-item text-color-azul" style="width: 20%;"><strong>Status do pedido:</strong></li>
+    <li class="list-group-item text-color-azul" style="width: 20%; border-radius: 0 20px 0 0"><strong>Status do pedido:</strong></li>
   </ul>
-
   <% @orders.reverse_each do |order| %>
     <%= link_to order_path(order) do %>
       <ul class="list-group list-group-horizontal ">
@@ -18,7 +18,4 @@
       </ul>
     <% end %>
   <% end %>
-
-
-
 </div>
