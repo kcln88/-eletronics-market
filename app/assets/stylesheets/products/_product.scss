@@ -10,13 +10,19 @@
 
   img {
     height: 100%;
-    max-width: 460px;
+    max-width: 580px;
   }
 }
 
-.item-img {
-  flex-grow: 1;
+// .item-img {
+//   flex-grow: 1;
 
+// }
+
+.color-gui {
+  color: #11235A;
+  font-size: 20px;
+  text-align: right;
 }
 
 .item-info {
@@ -46,6 +52,14 @@
   background-color: rgb(25, 163, 117);
   box-shadow: 0 2px 4px rgba(0,0,0,0.16),
   0 2px 4px rgba(0,0,0,0.23);
+}
+
+.carousel-img {
+  width: 400px;
+
+  .carousel-item img {
+    object-fit: contain;
+  }
 }
 // @media 900px
 @media(max-width:900px){

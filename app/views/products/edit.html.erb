@@ -8,7 +8,7 @@
         <%= f.input :description %>
         <%= f.input :stock %>
         <%= f.input :category %>
-        <%= f.input :photo, as: :file %>
+        <%= f.input :photos, as: :file, input_html: { multiple: true } %>
         <%= f.button :submit, class:"btn btn-success my-3", style: "width: 100%; border-radius: 40px; color:white;"  %>
       <% end %>
       <%= link_to 'Delete this product', product_path(@product), class:"btn btn-danger my-3", style: "width: 100%; border-radius: 40px; color:white;", data: { turbo_method: :delete, turbo_confirm: 'Are you sure you want to delete this product?' } %>
