@@ -2,8 +2,37 @@
   <h2 class="product-page-title text-color-azul h2"><strong>Detalhes do produto</strong></h2>
   <div class="item-card border border-2 p-5 border-radius-60">
     <div class="item-img">
-      <%= cl_image_tag @product.photo.key,class:"border-radius-60", style: "height: 300, width: 400, crop: :fit" %>
+      <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner carousel-img">
+          <% @product.photos.each_with_index do |photo, index| %>
+            <% if index == 0 %>
+              <div class="carousel-item active">
+                <%= cl_image_tag photo.key, class:"d-block" %>
+              </div>
+            <% else %>
+              <div class="carousel-item">
+                <%= cl_image_tag photo.key, class:"d-block" %>
+              </div>
+            <% end %>
+          <% end %>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleSlidesOnly" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleSlidesOnly" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
     </div>
+
+
+
+
+
+
+
     <div class="item-info text-color-azul" >
       <h3 class="margin-top-20"><%= @product.name %></h3>
       <div class="margin-top-20"><%= truncate(@product.description, length: 130) %></div>
