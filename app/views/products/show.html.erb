@@ -36,7 +36,9 @@
     <div class="item-info text-color-azul" >
       <h3 class="margin-top-20"><%= @product.name %></h3>
       <div class="margin-top-20"><%= truncate(@product.description, length: 130) %></div>
-      <p>R$ <%= humanized_money_with_symbol(@product.price) %>
+
+      <p class="color-gui mt-1"><strong><%= humanized_money_with_symbol(@product.price) %></strong>
+
       <p>Estoque: <%= @product.stock %></p>
       <div data-controller="show-form" data-show-form-price-value="<%= @product.price_cents %>">
         <%= simple_form_for [@product, @order] do |f| %>
