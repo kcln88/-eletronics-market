@@ -80,4 +80,10 @@ user3.save!
   product16 = Product.new(name: 'iPhone 14 Apple (128GB) Roxo', price_cents: 150000, description: 'O iPhone 14 tem o sistema de câmera dupla mais impressionante em um iPhone para fazer fotos espetaculares em pouca e muita luz. E Detecção de Acidente1, um recurso essencial de segurança capaz de identificar se você sofreu um acidente grave de carro e ligar para a emergência.', stock: 10, category: 'Smartphones', user_id:2)
   product16.photos.attach(io: file16, filename: "product16.png", content_type: "image/png")
   product16.save!
+  # file17 = URI.open("https://static.mundomax.com.br/produtos/72994/550/1.webp")
+  # file18 = URI.open("https://vaiobr.vtexassets.com/arquivos/ids/160338-800-800?v=638025721328630000&width=800&height=800&aspect=true")
+  # product17 = Product.new(name: 'notebookteste', price_cents: 1231231, description: 'O iPhone 14 tem o sistema de câmera dupla mais impressionante em um iPhone para fazer fotos espetaculares em pouca e muita luz. E Detecção de Acidente1, um recurso essencial de segurança capaz de identificar se você sofreu um acidente grave de carro e ligar para a emergência.', stock: 10, category: 'Smartphones', user_id:2)
+  # product17.photos.attach(io: file17, filename: "product17.png", content_type: "image/png")
+  # product17.photos.attach(io: file18, filename: "product17.png", content_type: "image/png")
+  # product17.save!
   p " Seed Finished!"

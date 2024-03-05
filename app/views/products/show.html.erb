@@ -36,7 +36,7 @@
       <p>Estoque: <%= @product.stock %></p>
       <div data-controller="show-form" data-show-form-price-value="<%= @product.price_cents %>">
         <%= simple_form_for [@product, @order] do |f| %>
-          <%= f.input :quantity, input_html: { data: {action: "change->show-form#calculateTotalPrice", show_form_target: "input" }, min: '0' } %>
+          <%= f.input :quantity, input_html: { data: {action: "change->show-form#calculateTotalPrice", show_form_target: "input" }, min: '1', value: 1 } %>
           <%= f.button :submit, "Comprar", class: 'botao-compra border-radius-60', id:"cacete" %>
           <br>
           <span >Preço total:<span data-show-form-target="total"></span></span>
