@@ -1,12 +1,12 @@
 
 require "open-uri"
 p "starting the Seed!"
-# user = User.new({ first_name: 'joao', last_name: 'silva', address: 'rua jerico 193', phone: '999999999', email: 'joao@email.com', password: '123123' })
-# user.save!
-# user2 = User.new({ first_name: 'maria', last_name: 'silva', address: 'rua jerico 193', phone: '999999999', email: 'maria@email.com', password: '123123' })
-# user2.save!
-# user3 = User.new({ first_name: 'pedro', last_name: 'silva', address: 'rua jerico 193', phone: '999999999', email: 'pedro@email.com', password: '123123' })
-# user3.save!
+user = User.new({ first_name: 'joao', last_name: 'silva', address: 'rua jerico 193', phone: '999999999', email: 'joao@email.com', password: '123123' })
+user.save!
+user2 = User.new({ first_name: 'maria', last_name: 'silva', address: 'rua jerico 193', phone: '999999999', email: 'maria@email.com', password: '123123' })
+user2.save!
+user3 = User.new({ first_name: 'pedro', last_name: 'silva', address: 'rua jerico 193', phone: '999999999', email: 'pedro@email.com', password: '123123' })
+user3.save!
 # file16 = URI.open("https://www.fastshop.com.br//wcsstore/FastShopCAS/images/catalog/AEMPV03BRARXO_PRD/AEMPV03BRARXO_PRD_447_1.jpeg")
 #   product16 = Product.new(name: 'iPhone 14 Apple (128GB) Roxo', price_cents: 3000, description: 'O iPhone 14 tem o sistema de câmera dupla mais impressionante em um iPhone para fazer fotos espetaculares em pouca e muita luz. E Detecção de Acidente1, um recurso essencial de segurança capaz de identificar se você sofreu um acidente grave de carro e ligar para a emergência.', stock: 10, category: 'Smartphones', user_id:1)
 #   product16.photos.attach(io: file16, filename: "product16.png", content_type: "image/png")
