@@ -1,6 +1,6 @@
 
 <div class="container">
-
+<!-- Section: Carroussel  -->
 <div id="myCarousel" class="carousel slide mb-6 pointer-event margin-top-100" data-bs-ride="carousel">
     <div class="carousel-indicators">
       <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="" aria-label="Slide 1"></button>
@@ -48,9 +48,10 @@
       <span class="visually-hidden">Next</span>
     </button>
   </div>
+<!-- Section: Carroussel  -->
 
+<!-- Section: Categorias  -->
 <div class="categorias-botoes margin-top-100">
-
   <h1 class="h2"><strong>Categorias</strong></h1>
 
     <div class = "card-category d-flex justify-content-evenly flex-wrap margin-top-100">
@@ -86,31 +87,87 @@
     </div>
 </div>
 </div>
+<!-- Section: Categorias  -->
 
 <h2 class="h2 margin-top-100"><strong>Produtos</strong></h2>
+
+
 <div class="margin-top-100">
+  <div class="container">
+<!-- Section: Data Controller list-products 1 -->
+    <div data-controller="list-products" data-list-products-total-value="<%= @products.count %>" class="data-controller-list">
 
-  <%= render 'shared/cards', products: @products %>
-</div>
-
-
-  <div class="container py-4 margin-top-100" >
-
-  <div class="row align-items-md-stretch">
-    <div class="col-md-6">
-      <div class="h-100 p-5 background-color-azul-padrao border-radius-60 box-shadow-sem-hover">
-        <h2>Promoções imperdiveis</h2>
-        <p>No mes do consumidor estamos com promoções imperdiveis, acesso nossas categorias para saber mais sobre os produtos em promoção</p>
+<!-- Section: Botao Quantidade de Produtos -->
+      <div class="d-flex flex-row-reverse">
+        <div class="btn-group">
+          <button data-list-products-target="textoAtual" class="btn btn-secondary btn-md" type="button">
+            Mostrar 8 produtos
+          </button>
+          <button type="button" class="btn btn-sm btn-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+            <span class="visually-hidden">Toggle Dropdown</span>
+          </button>
+          <ul class="dropdown-menu">
+            <li><a data-list-products-target="opcao1" class="dropdown-item" data-action="click->list-products#render1">Mostrar 8 produtos</a></li>
+            <li><a data-list-products-target="opcao2" class="dropdown-item" data-action="click->list-products#render2">Mostrar 16 produtos</a></li>
+            <li><a data-list-products-target="opcao3" class="dropdown-item" data-action="click->list-products#render3">Mostrar todos os xx produtos</a></li>
+          </ul>
+        </div>
       </div>
-    </div>
-    <div class="col-md-6">
-      <div class="h-100 p-5 bg-body-tertiary border border-radius-60 box-shadow-sem-hover" style="color: #11235A;">
-        <h2>Venha vender com a Eletronics Market!</h2>
-        <p>Ajudamos milhares de pessoas todos os anos a vender e comprar produtos eletronicos, sem burocracia, perda de tempo e taxa abusivas</p>
+<!-- Section: Botao Quantidade de Produtos -->
+
+<!-- Section: Cards -->
+      <div class="gallery-card-jairo">
+        <% @products.each_with_index do |product, index| %>
+          <%= link_to product_path(product), data:{list_products_target:'item', index: index} do %>
+            <div class="content-card">
+              <%= cl_image_tag product.photos[0].key, class:"card-product-image border-radius-60"%>
+              <h3><%= truncate(product.name, length: 12) %></h3>
+              <h6>R$ <%= product.price %></h6>
+              <p>Apenas <%= product.stock %> em estoque!</p>
+              <button>Compre Agora</button>
+            </div>
+          <% end %>
+        <% end %>
       </div>
+<!-- Section: Cards -->
+
+<!-- Section: Promocoes -->
+      <div class="container py-4 margin-top-100" >
+        <div class="row align-items-md-stretch">
+          <div class="col-md-6">
+            <div class="h-100 p-5 background-color-azul-padrao border-radius-60 box-shadow-sem-hover">
+              <h2>Promoções imperdiveis</h2>
+              <p>No mes do consumidor estamos com promoções imperdiveis, acesso nossas categorias para saber mais sobre os produtos em promoção</p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="h-100 p-5 bg-body-tertiary border border-radius-60 box-shadow-sem-hover" style="color: #11235A;">
+              <h2>Venha vender com a Eletronics Market!</h2>
+              <p>Ajudamos milhares de pessoas todos os anos a vender e comprar produtos eletronicos, sem burocracia, perda de tempo e taxa abusivas</p>
+            </div>
+          </div>
+        </div>
     </div>
+<!-- Section: Promocoes -->
+
+  <!-- Section: Cards -->
+      <div class="container">
+        <div class="gallery-card-jairo">
+          <% @products.each_with_index do |product, index| %>
+            <%= link_to product_path(product), data:{list_products_target:'item2', index: index} do %>
+              <div class="content-card">
+                <%= cl_image_tag product.photos[0].key, class:"card-product-image border-radius-60"%>
+                <h3><%= truncate(product.name, length: 12) %></h3>
+                <h6>R$ <%= product.price %></h6>
+                <p>Apenas <%= product.stock %> em estoque!</p>
+                <button>Compre Agora</button>
+              </div>
+            <% end %>
+          <% end %>
+        </div>
+      </div>
+  <!-- Section: Cards -->
+    </div>
+<!-- Section: Data Controller list-products -->
   </div>
 </div>
-
-
-
