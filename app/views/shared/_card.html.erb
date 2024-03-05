@@ -1,9 +1,7 @@
 <% @products.reverse_each do |product| %>
   <%= link_to edit_product_path(product) do %>
     <div class="content-card">
-    <% product.photos.each do |photo| %>
-      <%= cl_image_tag photo.key, class:"card-product-image border-radius-60"%>
-      <% end %>
+      <%= cl_image_tag product.photos[0].key, class:"card-product-image border-radius-60"%>
       <h3><%= truncate(product.name, length: 12) %></h3>
       <h6>R$ <%= product.price %></h6>
       <p>Apenas <%= product.stock %> em estoque!</p>
