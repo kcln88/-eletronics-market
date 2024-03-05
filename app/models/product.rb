@@ -1,7 +1,7 @@
 class Product < ApplicationRecord
   belongs_to :user
   has_many :orders
-  has_one_attached :photo
+  has_many_attached :photos
   monetize :price_cents
 
   validates :name, presence: true
@@ -9,7 +9,7 @@ class Product < ApplicationRecord
   validates :description, presence: true
   validates :stock, presence: true, numericality: { greater_than: 0 }
   validates :category, presence: true
-  validates :photo, presence: true
+  validates :photos, presence: true
   validates :price_cents, presence: true, numericality: { greater_than: 0 }
 
   include PgSearch::Model
