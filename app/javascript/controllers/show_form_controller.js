@@ -2,7 +2,7 @@ import { Controller } from "@hotwired/stimulus"
 
 // Connects to data-controller="show-form"
 export default class extends Controller {
-  static targets = ["input", "total"]
+  static targets = ["input", "total", "hide"]
   static values = {price: Number}
 
   connect() {
@@ -18,8 +18,6 @@ export default class extends Controller {
       currency: 'BRL'
     });
 
-
     this.totalTarget.innerText = formatted;
-    // var valorTotal =  parseInt(this.inputTarget.value) * this.priceValue / 100;
   }
 }
