@@ -29,7 +29,7 @@ class ProductsController < ApplicationController
 
   def update
     if @product.user == current_user
-      if @product.update(products_params2)
+      if @product.update(products_params)
         redirect_to product_path(@product)
       else
         render :edit, status: unprocessable_entity
@@ -56,9 +56,5 @@ class ProductsController < ApplicationController
 
   def products_params
     params.require(:product).permit(:name, :price_cents, :description, :stock, :category, photos: [])
-  end
-
-  def products_params2
-    params.require(:product).permit(:name, :price_cents, :description, :stock, :category)
   end
 end
